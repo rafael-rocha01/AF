@@ -1472,5 +1472,16 @@ async function validarModal() {
     document.getElementById("box_ativacao_manual").style.display = "none";
   }
 </script>
+  <script>
+  // === TURBINAR TECLADO NUMÉRICO ===
+  // Isso procura todos os campos de número e força o teclado numérico do celular aparecer
+  document.addEventListener("DOMContentLoaded", () => {
+    const numberInputs = document.querySelectorAll('input[type="number"]');
+    numberInputs.forEach(input => {
+      input.setAttribute('inputmode', 'decimal'); // Teclado numérico com vírgula
+      input.style.textAlign = "center";          // (Opcional) Centraliza o número, fica mais bonito
+    });
+</script>
+
 </body>
 </html>
